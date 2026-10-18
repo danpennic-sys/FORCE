@@ -1,17 +1,26 @@
-# FORCE briefing — Ops war room
+# FORCE briefing — Ops war room (expanded)
 
-Speak natural commands; FORCE compiles them locally to machine-readable intents.
+Local compile only. Speak naturally.
 
-## Supported phrases
+## Register
 
-| Say | Compiles to |
-|-----|-------------|
-| register agent **name** every **N** seconds | `register_schedule` interval |
-| register agent **name** cron **expr** | `register_schedule` cron |
-| depend **A** on **B** generation **N** | `add_dependency` |
-| fire agent **name** once | `fire_once` |
-| status for **name** | `query_status` |
+- set up agent **name** every **N** seconds|minutes
+- schedule agent **name** cron **expr**
+- run agent **name** once in **N** seconds
 
-## Downstream
+## Control
 
-JSON intents map to Operator Pages MCP / `ScheduleStore` (register, dependency, fire) when bridged.
+- enable|disable|pause agent **name**
+- fire|run|trigger|kick off agent **name**
+- list all schedules
+- export a snapshot
+
+## Dependencies
+
+- depend **A** on **B** generation **N**
+- **A** should wait for **B**
+- remove dependency from **A** on **B**
+
+## Status
+
+- status|completed|count for **name**
