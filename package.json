@@ -1,11 +1,11 @@
 {
   "name": "force",
-  "version": "0.1.0",
-  "description": "FORCE — force-multiplier voice engine: overlapping voices → machine-readable code",
+  "version": "0.1.1",
+  "description": "FORCE — force-multiplier voice engine (grammar frozen; MCP propose+confirm)",
   "type": "module",
   "scripts": {
     "start": "node dist/cli.js",
-    "test": "node --test dist/compiler.test.js",
+    "test": "node --test dist/compiler.test.js dist/mcp_bridge.test.js",
     "serve": "npx --yes serve public -p 4173"
   },
   "engines": { "node": ">=18" },
